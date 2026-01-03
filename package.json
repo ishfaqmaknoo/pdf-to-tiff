@@ -1,0 +1,10 @@
+{
+  "name": "pdf-to-tiff-converter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "docker:build": "docker build -t pdf-converter .",
+    "docker:run": "docker run --rm -v $(pwd):/workspace pdf-converter"
+  }
+}

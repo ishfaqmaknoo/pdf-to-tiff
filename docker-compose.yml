@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  pdf-converter:
+    image: imagemagick:7-alpine
+    container_name: pdf-converter
+    volumes:
+      - ./uploads:/input
+      - ./outputs:/output
+    environment:
+      - DENSITY=300
+      - QUALITY=100

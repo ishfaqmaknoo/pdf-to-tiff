@@ -1,0 +1,10 @@
+FROM imagemagick:7-alpha
+
+WORKDIR /app
+
+#COpy your conversion script
+COPY conver.sh /app/
+
+RUN chmod +x /app/convert.sh
+
+ENTRYPOINT [ "/app/convert.sh" ]
