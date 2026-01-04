@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node index.js",
     "docker:build": "docker build -t pdf-converter .",
-    "docker:run": "docker run --rm -v $(pwd):/workspace pdf-converter"
+    "docker:convert": "docker run --rm -v \"$(pwd)/uploads:/input\" -v \"$(pwd)/outputs:/output\" pdf-converter /input/sample.pdf /output/sample.tiff 300",
+    "docker:run": "docker run --rm -v /Users/ishfaqmaknoo/ishq\\ ✨/learning/pdf-to-tiff:/workspace pdf-converter"
   }
 }
